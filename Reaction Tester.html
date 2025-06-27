@@ -1,0 +1,70 @@
+<!doctype html>
+
+<html>
+    <head>
+        <title>CSS !</title>
+
+        <style>
+
+            #bx{
+                width: 200px;
+                height: 200px;
+                background-color: red;
+                position: relative;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        
+        <h1>BE QUICK</h1>
+        <p>click on the squares as soon as possible.</p>
+        <div id="bx"></div>
+        
+
+        <script>
+            var s = new Date().getTime();
+            function lavish(){
+                var wh;
+                var tp; 
+                var lft;
+                tp =Math.random()*300;
+                lft = Math.random()*300;
+                wh = (Math.random()*400)+100;
+                document.getElementById("bx").style.left = lft+"px";
+                document.getElementById("bx").style.top = tp+"px";
+                document.getElementById("bx").style.height = wh+"px";
+                document.getElementById("bx").style.width = wh+"px";
+                document.getElementById("bx").style.display = "block";
+                document.getElementById("bx").style.backgroundColor = getRandomColor();
+                s = new Date().getTime();
+            }
+
+
+            function getRandomColor() {
+                var letters = '0123456789ABCDEF';
+                var color = '#';
+                for (var i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+                }
+
+
+            
+            document.getElementById("bx").onclick = function(){
+                document.getElementById("bx").style.display = "none";
+                
+                var e = new Date().getTime();
+                var tt = (e-s)/1000;
+                alert(tt);
+                lavish();
+            }
+
+        </script>
+
+        
+
+    </body>
+</html>
