@@ -1,2 +1,2 @@
 # Reaction-tesing-game
-be fast
+--> https://lavishjainnn.github.io/Reaction-tesing-game/
